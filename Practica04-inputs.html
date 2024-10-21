@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #9a48c9;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7a39a1;
+}
+    </style>
+</head>
+<body>
+    <form action="index.html">
+        <label>Tipo Texto</label>
+        <input type="text"><br>
+        <br>
+
+        <label>Tipo Busqueda</label>
+        <input type="search"><br>
+        <br>
+
+        <label>Tipo URL</label>
+        <input type="url"><br>
+        <br>
+
+        <label>Tipo Email</label>
+        <input type="email"><br>
+        <br>
+
+        <label>Tipo Contraseña</label>
+        <input type="password"><br>
+        <br>
+
+        <label>Campo de Texto</label>
+        <textarea></textarea><br>
+        <br>
+
+        <label>Tipo Numerico</label>
+        <input type="number"><br>
+        <br>
+
+        <label>Tipo de Rango</label>
+        <input type="range"><br>
+        <br>
+
+        <label>Tipo de Fecha</label>
+        <input type="date"><br>
+        <br>
+
+        <label>Tipo de Hora</label>
+        <input type="time"><br>
+        <br>
+
+        <label>Tipo de fecha y hora</label>
+        <input type="datetime-local"><br>
+        <br>
+
+        <label>Tipo de Mes</label>
+        <input type="month"><br>
+        <br>
+
+        <label>Tipo de Semana</label>
+        <input type="week"><br>
+        <br>
+
+        <label>Radio Button</label>
+        <input type="radio"><br>
+        <br>
+
+        <label>Tipo de Color</label>
+        <input type="color"><br>
+        <br>
+
+        <label>Tipo de CheckBox</label>
+        <input type="checkbox"><br>
+        <br>
+
+        <label>Details</label>
+        <input type="text" list="items">
+        <details id="items">
+            <option value="1">Opcion 1</option>
+            <option value="2">Opcion 2</option>
+            <option value="3">Opcion 3</option>
+        </details><br>
+        <br>
+
+        <label>Select Option</label>
+        <select name="" id="">
+            <option value="1">Opcion 1</option>
+            <option value="2">Opcion 2</option>
+            <option value="3">Opcion 3</option>
+        </select><br>
+        <br>
+
+        
+        <select multiple>
+            <option value="1">Elemento 1</option>
+            <option value="2">Elemento 2</option>
+            <option value="3">Elemento 3</option>
+        </select><br>
+        <br>
+    </form>
+</body>
+</html>
