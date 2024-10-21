@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Hamburguesas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+        }
+        .info {
+            width: 75%;
+            text-align: left;
+        }
+        .line {
+            border: 1px solid #a7aab9;
+            margin: 10px 0;
+        }
+        .marquee {
+            background: #a7aab9;
+            color: white;
+            padding: 5px;
+            white-space: nowrap;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .column {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            background-color: #a7aab9;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #7a39a1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/imagenes/images.jfif" alt="Logotipo" style="max-width: 100%;">
+    </div>
+    <div class="info">
+        <h1>Diablo Burger</h1>
+        <div class="line"></div>
+        <p>Dirección: Av. Venustiano Carranza 123</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Web: www.hamburguesasDiablo.com</p>
+        <marquee class="marquee">El sabor del Diablo en cada mordida</marquee>
+    </div>
+</header>
+
+<div class="line"></div>
+
+<form>
+    <div class="column">
+        <h2>Selecciona tu Hamburguesa</h2>
+        <h3>Tipo de Hamburguesa</h3>
+        <label><input type="radio" name="hamburguesa" value="sencilla"> Sencilla - $35.00</label>
+        <label><input type="radio" name="hamburguesa" value="especial"> Especial - $45.00</label>
+        <label><input type="radio" name="hamburguesa" value="doble"> Doble - $60.00</label>
+        <label><input type="radio" name="hamburguesa" value="suprema"> Suprema - $90.00</label>
+
+        <h3>Tipo de Carne</h3>
+        <label><input type="radio" name="carne" value="tradicional"> Tradicional Especial</label>
+        <label><input type="radio" name="carne" value="angus"> Angus</label>
+        <label><input type="radio" name="carne" value="pollo"> Pollo</label>
+        <label><input type="radio" name="carne" value="roast_beef"> Roast Beef</label>
+    </div>
+
+    <div class="column">
+        <h2>Ingredientes Adicionales</h2>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="tomate"> Tomate</label>
+            <label><input type="checkbox" value="cebolla"> Cebolla</label>
+            <label><input type="checkbox" value="queso_amarillo"> Queso Amarillo</label>
+            <label><input type="checkbox" value="jamon"> Jamón</label>
+            <label><input type="checkbox" value="aguacate"> Aguacate</label>
+            <label><input type="checkbox" value="cebolla_morada"> Cebolla Morada</label>
+            <label><input type="checkbox" value="queso_gouda"> Queso Gouda</label>
+            <label><input type="checkbox" value="piña"> Piña</label>
+            <label><input type="checkbox" value="champinones"> Champiñones</label>
+            <label><input type="checkbox" value="peperoni"> Peperoni</label>
+        </div>
+    </div>
+
+    <div class="column">
+        <h2>Datos del Pedido</h2>
+        <label for="cantidad">Número de Hamburguesas:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+
+        <h3>Datos del Comprador</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="tipo_entrega">Tipo de Entrega:</label>
+        <select id="tipo_entrega" name="tipo_entrega">
+            <option value="domicilio">A Domicilio</option>
+            <option value="local">Para Recoger en el Local</option>
+        </select>
+
+        <button type="submit">Calcular Pedido</button>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecánico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaeaea;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 150px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #a7aab9;
+            color: white;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #a7aab9;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #7a39a1;
+        }
+        .developer-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="/imagenes/gaCHANG.png" alt="Logotipo" class="logo">
+    <h1>Taller Mecánico</h1>
+</header>
+
+<table>
+    <tr>
+        <th>Servicios</th>
+        <th>Tipo de Motor y Auto</th>
+        <th>Datos del Auto</th>
+    </tr>
+    <tr>
+        <td>
+            <label><input type="checkbox" value="cambio_aceite"> Cambio de Aceite</label>
+            <label><input type="checkbox" value="frenos"> Reparación de Frenos</label>
+            <label><input type="checkbox" value="alineacion"> Alineación y Balanceo</label>
+            <label><input type="checkbox" value="revision"> Revisión General</label>
+        </td>
+        <td>
+            <h4>Tipo de Motor:</h4>
+            <label><input type="radio" name="motor" value="gasolina"> Gasolina</label>
+            <label><input type="radio" name="motor" value="diesel"> Diesel</label>
+            <h4>Tipo de Auto:</h4>
+            <label><input type="radio" name="tipo_auto" value="sedan"> Sedan</label>
+            <label><input type="radio" name="tipo_auto" value="suv"> SUV</label>
+            <label><input type="radio" name="tipo_auto" value="pickup"> Pickup</label>
+        </td>
+        <td>
+            <label for="marca_modelo">Marca y Modelo:</label>
+            <input type="text" id="marca_modelo" name="marca_modelo" required>
+            <label for="requiere_factura">¿Requiere Factura?</label>
+            <input type="text" id="requiere_factura" name="requiere_factura">
+            <label for="forma_pago">Forma de Pago:</label>
+            <select id="forma_pago" name="forma_pago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta_credito">Tarjeta de Crédito</option>
+                <option value="transferencia">Transferencia</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<button onclick="showMessage()">Enviar Pedido</button>
+
+<div id="message" style="display:none; text-align: center; margin-top: 20px; font-size: 18px; color: #4CAF50;">
+    GRACIAS POR CONFIAR EN NOSOTROS.... SU COCHE ESTÁ EN BUENAS MANOS
+</div>
+
+<div class="developer-info">
+    <p>Desarrollado por: Adrian Rios</p>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById('message').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
