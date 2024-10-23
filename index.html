@@ -67,6 +67,98 @@ html {
     background-position-x: 390px;
   }
 }
+
+button{
+  position: absolute;
+  bottom: 130px;
+  left: 600px;
+} 
+
+.pushable {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(226, 25%, 69%);
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    hsl(248, 39%, 39%) 0%,
+    hsl(248, 39%, 49%) 8%,
+    hsl(248, 39%, 39%) 92%,
+    hsl(248, 39%, 29%) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: hsl(248, 53%, 58%);
+  padding: 16px 32px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
         </style>
     </head>
     <body>
@@ -77,10 +169,18 @@ html {
               <li><a href="practica03-boton.html">Practica de Boton</a></li>
               <li><a href="Practica01-tabla.html">Practica de Tabla</a></li><br>
               <br>
-              <li><a href="Practica-Hamburguesa.html">Practica de Hamburguesas</a></li>
+              <li><a href="Practica-Hamburguesa.html">Practica de Burger</a></li>
               <li><a href="Practica-Taller.html">Practica de Taller</a></li>
-              <li><a href="examen.html">Examen</a></li>
+              <li><a href="examen.html">Examen 2  Parcial</a></li>
             </ul>
           </nav>
+
+          <form action="index2.html">
+            <button class="pushable">
+              <span class="shadow"></span>
+              <span class="edge"></span>
+              <span class="front">PARCIAL 3</span>
+              </button>
+          </form>
     </body>
 </html>
