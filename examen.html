@@ -101,7 +101,7 @@
 
 <script>
     document.getElementById('boton1').onclick = function() {
-        // Obtener los valores del formulario
+        
         const minutos = parseFloat(document.getElementById('minutos').value) || 0;
         const plan = document.querySelector('input[name="plan"]:checked');
         const paquete = parseFloat(document.getElementById('paquete').value) || 0;
@@ -110,20 +110,20 @@
         const webservices = document.getElementById('webservices').checked ? 90 : 0;
         const firewall = document.getElementById('firewall').checked ? 110 : 0;
 
-        // Validar que se haya seleccionado un plan
+        
         if (!plan) {
             alert("Por favor, selecciona un plan.");
             return;
         }
 
-        // Calcular el total
-        const costoMinutos = minutos * 1; // 1 MXN por minuto
+        
+        const costoMinutos = minutos * 1; 
         const costoPlan = parseFloat(plan.value);
         const costoServicios = antivirus + nube + webservices + firewall;
 
         const total = costoMinutos + costoPlan + costoServicios + paquete;
 
-        // Mostrar el resultado
+        
         document.getElementById('totalPagar').textContent = total.toFixed(2);
         document.getElementById('resultado').style.display = 'block';
     };
