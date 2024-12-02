@@ -115,4 +115,4 @@ btnTop.addEventListener("click", function () {
 // DETECTAR EVENTO CLIC EN EL LOGO
 logo.addEventListener("click", function () {
      window.scrollTo(0,0);
-});
+})

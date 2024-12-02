@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            width: 600px;
+            margin: auto;
+        }
+
+        .pregunta{
+            margin-bottom: 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056B3;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Quiz de HTML, CSS y JavaScript</h1></center>
+
+    <form id="quiz">
+        <div class="pregunta">
+            <p>1. ¿Cual etiqueta se usa para un enlace HTML?</p>
+            <input type="radio" name="p1" value="a"> < a > <br>
+            <input type="radio" name="p1" value="link"> < link > <br>
+            <input type="radio" name="p1" value="p"> < p > <br>
+        </div>
+        <div class="pregunta">
+            <p>2. ¿Que propiedad CSS se usa para cambiar el color de fondo?</p>
+            <input type="radio" name="p2" value="color"> Color <br>
+            <input type="radio" name="p2" value="background-color"> background-color <br>
+            <input type="radio" name="p2" value="border-color"> border-color <br>
+        </div>
+        <div class="pregunta">
+            <p>3. ¿Que funcion en JavaScript muestra un mensaje en consola?</p>
+            <input type="radio" name="p3" value="alert()"> alert() <br>
+            <input type="radio" name="p3" value="console.log()"> console.log() <br>
+            <input type="radio" name="p3" value="prompt()"> prompt() <br>
+        </div>
+        <button type="button" id="enviar">Enviar Respuestas</button>
+    </form>
+    
+    <p id="resultado"></p>
+ 
+</body>
+
+<script>
+document.getElementById("enviar").addEventListener("click", function() {
+    let puntaje = 0;
+
+    // Evaluar respuesta de la pregunta 1
+    let respuesta1 = document.querySelector('input[name="p1"]:checked');
+    if (respuesta1 && respuesta1.value === "a") {
+        puntaje++;
+    }
+
+    // Evaluar respuesta de la pregunta 2
+    let respuesta2 = document.querySelector('input[name="p2"]:checked');
+    if (respuesta2 && respuesta2.value === "background-color") {
+        puntaje++;
+    }
+
+    // Evaluar respuesta de la pregunta 3
+    let respuesta3 = document.querySelector('input[name="p3"]:checked');
+    if (respuesta3 && respuesta3.value === "console.log()") {
+        puntaje++;
+    }
+
+    // Mostrar el puntaje
+    let resultadoText = `Tu puntaje es: ${puntaje}/3`;
+
+    if (puntaje === 3) {
+        resultadoText += " ¡Excelente trabajo!";
+    } else if (puntaje === 0) {
+        resultadoText += " Sigue practicando";
+    }
+
+    document.getElementById("resultado").innerText = resultadoText;
+});
+</script>
+
+</html>
